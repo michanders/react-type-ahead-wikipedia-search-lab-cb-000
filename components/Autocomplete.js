@@ -18,14 +18,14 @@ class Autocomplete extends React.Component {
   }
 
   componentDidMount() {
-		this.removeListener = resultStore.addListener(({results}) => {
+		this.removeListener = resultStore.addListener(({ results }) => {
 			this.setState({
         results
       });
 		})
 	}
 
-	componentWillUnmount(){
+	componentWillUnmount() {
 		this.removeListener();
 	}
 
@@ -39,8 +39,6 @@ class Autocomplete extends React.Component {
       actions.search(query)
     };
   }
-
-
 
   render() {
     return (
