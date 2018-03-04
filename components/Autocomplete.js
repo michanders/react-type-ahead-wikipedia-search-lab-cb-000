@@ -40,7 +40,7 @@ class Autocomplete extends React.Component {
 			actions.search(query);
 		};
 	}
-  
+
   render() {
 		const {query, results} = this.state;
     return (
