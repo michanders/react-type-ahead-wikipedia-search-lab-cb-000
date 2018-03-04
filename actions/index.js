@@ -13,7 +13,7 @@ const search = (query) => {
 		}
 		const [query,titles,descriptions,links] = data;
 		const results = titles.map((t, i) => ({
-			t,
+			title: t,
 			description: descriptions[i],
 			link: links[i]
 		}));
