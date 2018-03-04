@@ -17,7 +17,6 @@ const search = (query) => {
 			description: descriptions[i],
 			link: links[i]
 		}));
-
 		resultStore.setState({
 			results,
 			updated: requested
