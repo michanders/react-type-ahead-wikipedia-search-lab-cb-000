@@ -9,12 +9,11 @@ const search = (query) => {
 
   return wikipedia.search(query).then((data) => {
     if (resultStore.isOutdated(requested)){
-			return;
+			return true;
 		}
-
-		const [query,titles,descriptions,links] = data;
-		const results = titles.map((title, i) => ({
-			title,
+		const [titles,descriptions,links] = data;
+		const results = titles.map((t, i) => ({
+			t,
 			description: descriptions[i],
 			link: links[i]
 		}));
