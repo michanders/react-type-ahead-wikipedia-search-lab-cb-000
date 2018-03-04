@@ -11,7 +11,7 @@ class Autocomplete extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-			query: '',
+			query: "",
 			results: resultStore.getState().results
     };
 		this.handleChange = this.handleChange.bind(this);
