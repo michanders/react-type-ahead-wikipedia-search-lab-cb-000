@@ -42,14 +42,13 @@ class Autocomplete extends React.Component {
 	}
 
   render() {
-		const {query, results} = this.state;
     return (
-      <div className="autocomplete">
+      <div className = "autocomplete">
         <h2>Autocomplete</h2>
 				<SearchField
-					value={query}
+					value={this.state.query}
 					onChange={this.handleChange} />
-				<SearchResults results={results} />
+				<SearchResults results={this.state.results} />
       </div>
     );
   }
