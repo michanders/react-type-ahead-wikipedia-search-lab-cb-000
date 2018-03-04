@@ -11,9 +11,9 @@ const search = (query) => {
     if (resultStore.isOutdated(requested)){
 			return true;
 		}
-		const [titles,descriptions,links] = data;
-		const results = titles.map((title, i) => ({
-			title,
+		var [titles,descriptions,links] = data;
+		var results = titles.map((t, i) => ({
+			t,
 			description: descriptions[i],
 			link: links[i]
 		}));
