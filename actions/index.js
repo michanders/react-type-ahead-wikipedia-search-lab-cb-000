@@ -4,7 +4,7 @@ import jsonp from 'jsonp';
 import resultStore from '../stores/resultStore';
 import wikipedia from '../utils/wikipedia';
 
-const search = (query) => {
+export default const search = (query) => {
   const requested = new Date();
 
   return wikipedia.search(query).then((data) => {
@@ -12,9 +12,9 @@ const search = (query) => {
 			return true;
 		}
 
-		const [titles,descriptions,links] = data;
-		const results = titles.map((title, i) => ({
-			title,
+		const [query,titles,descriptions,links] = data;
+		const results = titles.map((t, i) => ({
+			t,
 			description: descriptions[i],
 			link: links[i]
 		}));
@@ -25,5 +25,3 @@ const search = (query) => {
 		});
   });
 };
-
-export default { search };
