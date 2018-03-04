@@ -4,7 +4,7 @@ import jsonp from 'jsonp';
 import resultStore from '../stores/resultStore';
 import wikipedia from '../utils/wikipedia';
 
-export default const search = (query) => {
+const search = (query) => {
   const requested = new Date();
 
   return wikipedia.search(query).then((data) => {
@@ -25,3 +25,5 @@ export default const search = (query) => {
 		});
   });
 };
+
+export default { search };
