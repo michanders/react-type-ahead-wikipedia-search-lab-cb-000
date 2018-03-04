@@ -20,7 +20,7 @@ export default class Store {
       this.setState({
         state
       })
-    }
+    };
   }
 
   getState() {
