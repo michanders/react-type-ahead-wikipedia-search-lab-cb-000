@@ -35,7 +35,6 @@ class Autocomplete extends React.Component {
 		this.setState({
       query
     });
-
 		if(query.length > 2) {
 			actions.search(query);
 		};
