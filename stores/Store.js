@@ -16,7 +16,7 @@ export default class Store {
 
   setState(state) {
     this.state = state;
-    this.listeners.forEach(list {
+    this.listeners.forEach(list => {
       listener.call(this, state);
     })
   }
