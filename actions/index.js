@@ -8,10 +8,9 @@ const search = (query) => {
   const requested = new Date();
 
   return wikipedia.search(query).then((data) => {
-    if (resultStore.isOutdated(requested)){
+    if (resultStore.isOutdated(requested)) {
 			return true;
 		}
-
 		const [query,titles,descriptions,links] = data;
 		const results = titles.map((t, i) => ({
 			t,
