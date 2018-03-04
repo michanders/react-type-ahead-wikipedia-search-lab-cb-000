@@ -17,7 +17,9 @@ export default class Store {
   setState(state) {
     this.state = state;
     for (const listener of this.listeners) {
-      listener.call(this, state);
+      this.setState({
+        state
+      })
     }
   }
 
