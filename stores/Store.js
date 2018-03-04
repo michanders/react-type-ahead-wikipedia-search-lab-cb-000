@@ -9,7 +9,7 @@ export default class Store {
   addListener(listener) {
     this.listeners.push(listener);
 		const removeListener = () => {
-			this.listeners = this.listeners.filter(l => listener !== l);
+			this.listeners = this.listeners.filter(list => listener !== list);
 		};
 		return removeListener;
   }
